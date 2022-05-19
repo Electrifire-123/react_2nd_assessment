@@ -1,0 +1,95 @@
+      <div className='parent'>
+                      {
+    
+        Records.map((curreElem)=>{
+                        const{id,name,department,rating}=curreElem
+                    
+                      
+                                return(
+
+                      
+                                        <div  key={id} className='child' >
+
+                                        Name:{name}|Department:{department}|Rating:{rating}  </div>
+                                      
+                                           
+                                       
+                                                
+                                           
+                                        )    
+                  
+        }
+
+
+
+        )}
+               
+                    <div className='parent'>
+                      {
+    
+        Records.map((curreElem)=>{
+                        const{id,name,department,rating}=curreElem
+                    
+                      
+  
+
+
+                </div>
+
+
+
+   <div 
+              <div 
+
+const [userRegistration, setuserRegistration] = useState({
+name:"",
+department:"",
+rating:""
+
+
+
+
+});
+const [Records, setRecords] = useState([])
+  const handleInput=(e)=>{
+const name=e.target.name;
+const value=e.target.value;
+console.log(name,value);
+setuserRegistration({...userRegistration,[name]:value})
+
+  }
+const handleSubmit=(e)=>{
+  
+
+ 
+              e.preventDefault()
+                const newRecord={...userRegistration,id:new Date().getTime().toString()}
+                console.log(Records)
+                setRecords([...Records,newRecord])
+                console.log(Records)
+                setuserRegistration({name:" ",department:" ",rating:" "});
+        }
+     
+
+
+
+    return (
+               <div className='body'>
+
+                               <h1>EMPLOYEE FEEDBACK FORM</h1> <br />
+                <form action="" onSubmit={handleSubmit}>
+              
+                        <div>
+                                <label className='top' htmlFor='name'>Name  : </label>
+                             
+
+
+
+react-dom.development.js:86 Warning: A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components
+    at input
+    at div
+    at form
+    at div
+    at Form (http://localhost:3000/static/js/bundle.js:119:78)
+    at div
+    at App
