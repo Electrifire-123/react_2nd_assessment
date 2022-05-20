@@ -93,3 +93,25 @@ react-dom.development.js:86 Warning: A component is changing an uncontrolled inp
     at Form (http://localhost:3000/static/js/bundle.js:119:78)
     at div
     at App
+
+
+
+*Interview qustion about removeEventListener
+
+useEffect(() => {
+  window.addEventListener("resize", () => {
+    updateLightSaber(pos);
+  });
+  return () =>
+    window.removeEventListener("resize", () => {
+      updateLightSaber(pos);
+    });
+}, [pos]);
+
+useEffect(() => {
+  function _updateLightSaber() {
+    updateLightSaber(pos);
+  }
+  window.addEventListener("resize", _updateLightSaber);
+  return () => window.removeEventListener("resize", _updateLightSaber);
+}, [pos]);

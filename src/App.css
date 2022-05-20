@@ -64,7 +64,7 @@ input:focus{
 }
 .info_container{
   display: flex;
-  margin: 2px auto;
+  margin: 20px auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
